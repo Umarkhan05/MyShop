@@ -12,7 +12,8 @@ router.get('/', async (req , res) =>{
     try{
         const categories = await Category.find(searchOptions)
         res.render('categories/index', 
-        {categories: categories,
+        {
+        categories: categories,
         searchOptions: req.query
         });
     }

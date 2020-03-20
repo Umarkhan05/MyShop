@@ -8,6 +8,7 @@ const app = express();
 
 const indexRouter = require('./routes/index');
 const catRouter = require('./routes/categories');
+const productRouter = require('./routes/products');
 
 const expressLayouts = require("express-ejs-layouts");
 
@@ -36,6 +37,7 @@ mongoose.connect(process.env.DB_URL,
 
     app.use('/', indexRouter);
     app.use('/categories', catRouter);
+    app.use('/products', productRouter);
     
     
 
